@@ -14,6 +14,8 @@ endpoints.get('/sala/:sala',autenticador,async (req,resp)=>{
     resp.send(reg)
 })
 
+
+
 endpoints.post('/sala', autenticador, async (req,resp) =>{
     let nome = req.body.nome
     let usuarioLogadoId = req.user.id

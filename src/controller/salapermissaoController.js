@@ -15,14 +15,18 @@ endpoints.post('/sala/:sala/entrar', autenticador, async (req, resp) => {
         return resp.status(404).send({ mensagem: 'Sala não encontrada' })
     }
     
+    else{
     const salaAprovacao = await SalaPerRepo.Pedirpermissao(idsala, userId, false)
     
     resp.status(200).send({
         mensagem: `Sala encontrada `,
         idPermissao: salaAprovacao
     });
+}
 
 });
+
+
 
 endpoints.post('/sala/:sala/aprovar/:usuario', autenticador, async (req, resp) => {
     let idsala = req.params.sala

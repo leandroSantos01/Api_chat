@@ -30,6 +30,7 @@ endpoints.post('/chat/:usuario/:sala', autenticador, async (req, resp) => {
 });
 
 
+
 endpoints.get('/chat/:sala', autenticador, async (req, resp) => {
     let idSala = req.params.sala
     let usuarioLogadoId = req.user.id

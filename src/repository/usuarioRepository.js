@@ -17,6 +17,7 @@ export async function criarUsuario(novo) {
 }
 
 
+
 export async function AutenticarUsuario(email,senha) {
     const comando = `
     select id, nome, email

@@ -19,6 +19,7 @@ export async function inserirMensagem(usuarioId, salaId, mensagem) {
 }
 
 
+
 export async function Buscarmensagens(sala_id) {
 
     const comando= `

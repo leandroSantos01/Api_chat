@@ -12,6 +12,8 @@ endpoints.post('/usuario', async (req,resp) =>{
         novoID:id})
 })
 
+
+
 endpoints.post('/usuario/login', async (req,resp) =>{
     let email = req.body.email
     let senha = req.body.senha

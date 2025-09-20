@@ -13,6 +13,7 @@ export async function Pedirpermissao(sala_id, user_id, aprovado) {
 }
 
 
+
 export async function aprovarPermissao(salaId, usuarioId) {
     const comando = `
     UPDATE salaPermissao
@@ -21,6 +22,8 @@ export async function aprovarPermissao(salaId, usuarioId) {
     const [res] = await connection.query(comando, [salaId, usuarioId])
     return res.affectedRows
 }
+
+
 
 export async function verificaPermissao(salaId, usuarioId){
     const comando = `

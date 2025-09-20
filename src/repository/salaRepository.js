@@ -30,6 +30,7 @@ export async function criarSala(nome, usuario_id,aprovado) {
 }
 
 
+
 export async function procurarSala(id){
     const comando = `
     SELECT * FROM sala
