@@ -19,7 +19,7 @@ endpoints.get('/sala/:sala',autenticador,async (req,resp)=>{
 endpoints.post('/sala', autenticador, async (req,resp) =>{
     let nome = req.body.nome
     let usuarioLogadoId = req.user.id
-    let aprovado = true
+    
 
     if (!nome){
         resp.status(400).send({mensagem:'Nome da sala obrigatório'})
@@ -28,7 +28,7 @@ endpoints.post('/sala', autenticador, async (req,resp) =>{
         resp.status(400).send({mensagem:'Usuário não autenticado'})
     }
     else{
-            let salaId = await salaRepo.criarSala(nome, usuarioLogadoId,aprovado)
+            let salaId = await salaRepo.criarSala(nome, usuarioLogadoId,true)
             resp.send({salaId: salaId})
     }
 })
